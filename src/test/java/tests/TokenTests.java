@@ -4,7 +4,7 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import pojo.TokenGenerationCredentials;
 
-import static api.Helper.*;
+import static api.HeaderApi.headerBuilder;
 import static api.TokenApi.generateToken;
 import static api.TokenApi.validTokenRequestBody;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -15,21 +15,21 @@ public class TokenTests {
     //positive scenario
     @Test
     public void generateTokenAllValid() {
-        TokenGenerationCredentials validCredentials = new TokenGenerationCredentials("admin","password123");
-        Response response = generateToken(validCredentials,getValidContentTypeHeaders());
+        TokenGenerationCredentials validCredentials = new TokenGenerationCredentials("admin", "password123");
+        Response response = generateToken(validCredentials, headerBuilder("valid", "missing", "missing", null));
         assertThat(response.getStatusCode(), equalTo(200));
     }
 
     //negative scenarios - headers
     @Test
     public void generateTokenWithInvalidContentType() {
-        Response response = generateToken(validTokenRequestBody, getInvalidContentTypeHeaders());
+        Response response = generateToken(validTokenRequestBody, headerBuilder("invalid", "missing", "missing", null));
         assertThat(response.getStatusCode(), equalTo(400));
     }
 
     @Test
     public void generateTokenWithNoContentType() {
-        TokenGenerationCredentials validCredentials = new TokenGenerationCredentials("admin","password123");
+        TokenGenerationCredentials validCredentials = new TokenGenerationCredentials("admin", "password123");
         Response response = generateToken(validCredentials);
         assertThat(response.getStatusCode(), equalTo(200));
         assertThat(response.path("reason"), equalTo("Bad credentials"));
@@ -38,24 +38,24 @@ public class TokenTests {
     //negative scenarios - invalid body parts
     @Test
     public void generateTokenWithInvalidCredentials() {
-        TokenGenerationCredentials invalidCredentials = new TokenGenerationCredentials("adminn","password1233");
-        Response response = generateToken(invalidCredentials,getValidContentTypeHeaders());
+        TokenGenerationCredentials invalidCredentials = new TokenGenerationCredentials("adminn", "password1233");
+        Response response = generateToken(invalidCredentials, headerBuilder("valid", "missing", "missing", null));
         assertThat(response.getStatusCode(), equalTo(200));
         assertThat(response.path("reason"), equalTo("Bad credentials"));
     }
 
     @Test
     public void generateTokenWithInvalidUsername() {
-        TokenGenerationCredentials invalidCredentials = new TokenGenerationCredentials("adminn","password123");
-        Response response = generateToken(invalidCredentials,getValidContentTypeHeaders());
+        TokenGenerationCredentials invalidCredentials = new TokenGenerationCredentials("adminn", "password123");
+        Response response = generateToken(invalidCredentials, headerBuilder("valid", "missing", "missing", null));
         assertThat(response.getStatusCode(), equalTo(200));
         assertThat(response.path("reason"), equalTo("Bad credentials"));
     }
 
     @Test
     public void generateTokenWithInvalidPassword() {
-        TokenGenerationCredentials invalidCredentials = new TokenGenerationCredentials("admin","password1233");
-        Response response = generateToken(invalidCredentials,getValidContentTypeHeaders());
+        TokenGenerationCredentials invalidCredentials = new TokenGenerationCredentials("admin", "password1233");
+        Response response = generateToken(invalidCredentials, headerBuilder("valid", "missing", "missing", null));
         assertThat(response.getStatusCode(), equalTo(200));
         assertThat(response.path("reason"), equalTo("Bad credentials"));
     }
@@ -64,23 +64,25 @@ public class TokenTests {
     @Test
     public void generateTokenWithMissingCredentials() {
         TokenGenerationCredentials missingCredentials = new TokenGenerationCredentials(null, null);
-        Response response = generateToken(missingCredentials,getValidContentTypeHeaders());
+        Response response = generateToken(missingCredentials, headerBuilder("valid", "missing", "missing", null));
         assertThat(response.getStatusCode(), equalTo(200));
         assertThat(response.path("reason"), equalTo("Bad credentials"));
     }
 
     @Test
     public void generateTokenWithMissingUsername() {
-        TokenGenerationCredentials missingCredentials = new TokenGenerationCredentials(null,"password123");
-        Response response = generateToken(missingCredentials,getValidContentTypeHeaders());
+        TokenGenerationCredentials missingCredentials = new TokenGenerationCredentials(null, "password123");
+        Response response = generateToken(missingCredentials, headerBuilder("valid", "missing", "missing", null));
         assertThat(response.getStatusCode(), equalTo(200));
-        assertThat(response.path("reason"), equalTo("Bad credentials"));    }
+        assertThat(response.path("reason"), equalTo("Bad credentials"));
+    }
 
     @Test
     public void generateTokenWithMissingPassword() {
-        TokenGenerationCredentials missingCredentials = new TokenGenerationCredentials("admin",null);
-        Response response = generateToken(missingCredentials,getValidContentTypeHeaders());
+        TokenGenerationCredentials missingCredentials = new TokenGenerationCredentials("admin", null);
+        Response response = generateToken(missingCredentials, headerBuilder("valid", "missing", "missing", null));
         assertThat(response.getStatusCode(), equalTo(200));
-        assertThat(response.path("reason"), equalTo("Bad credentials"));    }
+        assertThat(response.path("reason"), equalTo("Bad credentials"));
+    }
 
 }

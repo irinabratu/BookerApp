@@ -2,7 +2,6 @@ package api;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojo.Booking;
 import pojo.BookingDates;
