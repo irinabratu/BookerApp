@@ -8,18 +8,20 @@ public class HeaderApi {
     private final static String invalidContentType = "application/xml";
     private final static String validAccept = "application/json";
     private final static String invalidAccept = "application/xml";
+
+    private final static String invalidAtomAccept = "application/atom+xml";
     private final static String validAuth = "Basic YWRtaW46cGFzc3dvcmQxMjM=";
     private final static String invalidAuth = "Basic 1234=";
 
-    public static HashMap<String,String> headerBuilder(String contentType, String accept, String auth, String token) {
-        HashMap<String,String> headerBuilder = new HashMap<>();
+    public static HashMap<String, String> headerBuilder(String contentType, String accept, String auth, String token) {
+        HashMap<String, String> headerBuilder = new HashMap<>();
 
-        switch(contentType) {
+        switch (contentType) {
             case "valid":
-                headerBuilder.put("Content-Type",validContentType);
+                headerBuilder.put("Content-Type", validContentType);
                 break;
             case "invalid":
-                headerBuilder.put("Content-Type",invalidContentType);
+                headerBuilder.put("Content-Type", invalidContentType);
                 break;
             case "missing":
                 break;
@@ -27,12 +29,15 @@ public class HeaderApi {
                 System.out.println("contentType value not expected");
         }
 
-        switch(accept) {
+        switch (accept) {
             case "valid":
-                headerBuilder.put("Accept",validAccept);
+                headerBuilder.put("Accept", validAccept);
                 break;
             case "invalid":
-                headerBuilder.put("Accept",invalidAccept);
+                headerBuilder.put("Accept", invalidAccept);
+                break;
+            case "invalidAtom":
+                headerBuilder.put("Accept", invalidAtomAccept);
                 break;
             case "missing":
                 break;
@@ -40,12 +45,12 @@ public class HeaderApi {
                 System.out.println("accept value not expected");
         }
 
-        switch(auth) {
+        switch (auth) {
             case "valid":
-                headerBuilder.put("Authorization",validAuth);
+                headerBuilder.put("Authorization", validAuth);
                 break;
             case "invalid":
-                headerBuilder.put("Authorization",invalidAuth);
+                headerBuilder.put("Authorization", invalidAuth);
                 break;
             case "missing":
                 break;
@@ -53,8 +58,8 @@ public class HeaderApi {
                 System.out.println("auth value not expected");
         }
 
-        if(token!=null){
-            headerBuilder.put("Cookie","token=" + token);
+        if (token != null) {
+            headerBuilder.put("Cookie", "token="+token);
         }
 
         return headerBuilder;

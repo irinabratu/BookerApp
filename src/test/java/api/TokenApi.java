@@ -17,7 +17,7 @@ public class TokenApi {
     public static Response generateToken(Object credentials, HashMap<String, String> headersMap) {
         return post(path, credentials, headersMap);
     }
-    public static String retrieveToken(Object credentials,HashMap<String, String> headersMap){
-        return post(path, credentials, headersMap).path("reason").toString();
+    public static String retrieveToken(Object credentials, HashMap<String, String> headersMap){
+        return post(path, credentials, headersMap).path("token").toString();
     }
 }

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0aa84ee3-7c80-4e38-9a41-557548e4e0e8" name="Changes" comment="booking progress">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UpdateBookingTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/BookingApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/BookingApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/HeaderApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/HeaderApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/Helper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/RestResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/RestResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/TokenApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/TokenApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BookingTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TokenTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TokenTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2aRqN27aCwDMn9vNjVMxs6IHxhI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/pojo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.E2ETests.e2eJourney">
+    <configuration name="CreateBookingTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BookerApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CreateBookingTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E2ETests.e2eJourney" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BookerApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.E2ETests" />
+      <option name="METHOD_NAME" value="e2eJourney" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartiallyUpdateBookingTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BookerApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PartiallyUpdateBookingTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartiallyUpdateBookingTests.updateBookingInvalidFirstName" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BookerApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PartiallyUpdateBookingTests" />
+      <option name="METHOD_NAME" value="updateBookingInvalidFirstName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpdateBookingTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BookerApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UpdateBookingTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.E2ETests.e2eJourney" />
+        <item itemvalue="TestNG.PartiallyUpdateBookingTests.updateBookingInvalidFirstName" />
+        <item itemvalue="TestNG.PartiallyUpdateBookingTests" />
+        <item itemvalue="TestNG.CreateBookingTests" />
+        <item itemvalue="TestNG.UpdateBookingTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0aa84ee3-7c80-4e38-9a41-557548e4e0e8" name="Changes" comment="" />
+      <created>1704291697677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704291697677</updated>
+    </task>
+    <task id="LOCAL-00001" summary="booking progress">
+      <created>1704461679413</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704461679413</updated>
+    </task>
+    <task id="LOCAL-00002" summary="booking progress">
+      <created>1704716263914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704716263915</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="booking progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="booking progress" />
+  </component>
+</project>

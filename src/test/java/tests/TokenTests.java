@@ -84,5 +84,4 @@ public class TokenTests {
         assertThat(response.getStatusCode(), equalTo(200));
         assertThat(response.path("reason"), equalTo("Bad credentials"));
     }
-
 }
